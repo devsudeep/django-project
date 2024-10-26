@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path
 
-def hello_world(request):
+def home(request):
     return HttpResponse("Welcome to git")
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',hello_world)
+    path('home/',home)
 ]
